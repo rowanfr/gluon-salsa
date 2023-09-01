@@ -1,0 +1,38 @@
+[package]
+name = "gluon-salsa"
+version = "0.15.2" # CHECK salsa-macros version
+authors = ["Salsa developers"]
+edition = "2018"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/salsa-rs/salsa"
+description = "A generic framework for on-demand, incrementalized computation (experimental)"
+readme = "README.md"
+
+[dependencies]
+crossbeam-utils = { version = "0.7.1", default-features = false }
+indexmap = "1.0.1"
+futures-channel = { version = "0.3", features = ["alloc"], default-features = false, optional = true }
+futures-util = { version = "0.3", default-features = false, optional = true }
+lock_api = "0.4"
+log = "0.4.5"
+parking_lot = "0.11.0"
+rustc-hash = "1.0"
+smallvec = "1.0.0"
+oorandom = "11"
+
+gluon-salsa-macros = { version = "0.15.0", path = "components/salsa-macros" }
+
+[dev-dependencies]
+diff = "0.1.0"
+env_logger = "0.7"
+futures-util = { version = "0.3", features = ["async-await"] }
+linked-hash-map = "0.5.2"
+rand = "0.7"
+rand_distr = "0.2.1"
+tokio = { version = "0.2", features = ["macros", "rt-core"] }
+
+[workspace]
+
+[features]
+default = ["async"]
+async = ["futures-channel", "futures-util", "gluon-salsa-macros/async"]
