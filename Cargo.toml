@@ -20,7 +20,7 @@ readme = "README.md"
 license = "Apache-2.0 OR MIT"
 repository = "https://github.com/salsa-rs/salsa"
 [dependencies.crossbeam-utils]
-version = "0.7.1"
+version = "0.8.16"
 default-features = false
 
 [dependencies.futures-channel]
@@ -35,50 +35,50 @@ optional = true
 default-features = false
 
 [dependencies.gluon-salsa-macros]
-version = "0.15.0"
+version = "0.15.2"
 
 [dependencies.indexmap]
-version = "1.0.1"
+version = "2.0.0"
 
 [dependencies.lock_api]
 version = "0.4"
 
 [dependencies.log]
-version = "0.4.5"
+version = "0.4.20"
 
 [dependencies.oorandom]
 version = "11"
 
 [dependencies.parking_lot]
-version = "0.11.0"
+version = "0.12.1"
 
 [dependencies.rustc-hash]
-version = "1.0"
+version = "1.1"
 
 [dependencies.smallvec]
-version = "1.0.0"
+version = "1.11.0"
 [dev-dependencies.diff]
-version = "0.1.0"
+version = "0.1.13"
 
 [dev-dependencies.env_logger]
-version = "0.7"
+version = "0.10"
 
 [dev-dependencies.futures-util]
 version = "0.3"
 features = ["async-await"]
 
 [dev-dependencies.linked-hash-map]
-version = "0.5.2"
+version = "0.5.6"
 
 [dev-dependencies.rand]
-version = "0.7"
+version = "0.8"
 
 [dev-dependencies.rand_distr]
-version = "0.2.1"
+version = "0.4.3"
 
 [dev-dependencies.tokio]
-version = "0.2"
-features = ["macros", "rt-core"]
+version = "1.32.0"
+features = ["macros", "rt"]
 
 [features]
 async = ["futures-channel", "futures-util", "gluon-salsa-macros/async"]
